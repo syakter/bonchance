@@ -3154,7 +3154,7 @@ vm_pqbatch_process_page(struct vm_pagequeue *pq, vm_page_t m)
 			if (rand_num <= 7) {
 				TAILQ_INSERT_BEFORE(&vmd->vmd_inacthead, m, plinks.q);
 			} else {
-				TAILQ_INSERT_TAIL(&vmd_>vmd_inacthead, m, plinks.q);
+				TAILQ_INSERT_TAIL(&vmd->vmd_inacthead, m, plinks.q);
 			}
 		} else
 			TAILQ_INSERT_TAIL(&pq->pq_pl, m, plinks.q);
